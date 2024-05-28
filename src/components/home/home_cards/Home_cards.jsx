@@ -35,7 +35,7 @@ function Home_cards() {
                             <img src={nike} alt="" />
                             <div className="text">
                                 <h6>01 Jan, 2015</h6>
-                                <h4>Fashion Industry</h4>
+                                <h5>Fashion Industry</h5>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                             </div>
                         </div>
@@ -43,7 +43,7 @@ function Home_cards() {
                             <img src={figma} alt="" />
                             <div className="text">
                                 <h6>01 Jan, 2015</h6>
-                                <h4>Best Design Tools</h4>
+                                <h5>Best Design Tools</h5>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                             </div>
                         </div>
@@ -51,7 +51,7 @@ function Home_cards() {
                             <img src={kronos} alt="" />
                             <div className="text">
                                 <h6>01 Jan, 2015</h6>
-                                <h4>HR Community</h4>
+                                <h5>HR Community</h5>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                             </div>
                         </div>
@@ -64,7 +64,7 @@ function Home_cards() {
                         <div className="card_3">
                             <img src={shoes} alt="" />
                             <div className="text">
-                                <h4>Blue Swade Nike Sneakers</h4>
+                                <h5>Blue Swade Nike Sneakers</h5>
                                 <div className="star">
                                     <MdOutlineStar className='star_full' />
                                     <MdOutlineStar className='star_full' />
@@ -78,7 +78,7 @@ function Home_cards() {
                         <div className="card_3">
                             <img src={shoes} alt="" />
                             <div className="text">
-                                <h4>Blue Swade Nike Sneakers</h4>
+                                <h5>Blue Swade Nike Sneakers</h5>
                                 <div className="star">
                                     <MdOutlineStar className='star_full' />
                                     <MdOutlineStar className='star_full' />
@@ -92,7 +92,7 @@ function Home_cards() {
                         <div className="card_3">
                             <img src={shoes} alt="" />
                             <div className="text">
-                                <h4>Blue Swade Nike Sneakers</h4>
+                                <h5>Blue Swade Nike Sneakers</h5>
                                 <div className="star">
                                     <MdOutlineStar className='star_full' />
                                     <MdOutlineStar className='star_full' />
