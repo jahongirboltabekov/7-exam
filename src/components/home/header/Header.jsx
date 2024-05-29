@@ -5,8 +5,16 @@ import { CiHeart } from "react-icons/ci";
 import { IoCartOutline } from "react-icons/io5";
 import { IoSearchSharp } from "react-icons/io5";
 import { NavLink } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+
+
+
 
 function Header() {
+    let wishlist = useSelector(state => state.heart.value)
+    let cart = useSelector(state => state.cart.value)
+ 
+
   return (
     <div>
         <div className="container">
@@ -23,9 +31,9 @@ function Header() {
                     </select>
                 </div>
                 <ul>
-                    <li><IoPersonOutline className='icons' /></li>
-                    <li><NavLink className={({isActive}) => isActive ? "link-active" : ""} to={'/wishlist'}><CiHeart className='icons' /></NavLink></li>
-                    <li><NavLink className={({isActive}) => isActive ? "link-active" : ""} to={'/cart'}><IoCartOutline className='icons' /></NavLink></li>
+                    <li><NavLink className={({isActive}) => isActive ? "link-active" : ""} to={'/login'} ><IoPersonOutline className='icons' /></NavLink></li>
+                    <li><NavLink className={({isActive}) => isActive ? "link-active" : ""} to={'/wishlist'}><CiHeart className='icons' /><span>{wishlist.length}</span></NavLink></li>
+                    <li><NavLink className={({isActive}) => isActive ? "link-active" : ""} to={'/cart'}><IoCartOutline className='icons' /><span>{cart.length}</span></NavLink></li>
                     <li className='li1'>Items</li>
                     <li className='li2'>$0.00</li>
                     <li><IoSearchSharp className='icons' /></li>

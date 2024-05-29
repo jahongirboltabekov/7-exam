@@ -14,9 +14,16 @@ import 'swiper/css/navigation';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { useUpdateProductQuery } from '../../context/ProductApi/index';
 import { useGetProductsQuery } from '../../context/ProductApi/index';
+import { toggleHeart } from '../../context/Heart'; 
+import { addToCart } from '../../context/Card';
+import { useDispatch, useSelector } from 'react-redux';
+import { FaHeart } from "react-icons/fa";
+
 
 
 function Single() {
+    const dispatch = useDispatch()
+    let wishlist = useSelector(state => state.heart.value)
     const{data:data_swiper} = useGetProductsQuery()
     const {id} = useParams()
     const {data} = useUpdateProductQuery(id)
@@ -74,10 +81,16 @@ function Single() {
                 <img src={el.image} alt="" />
                 <div className="hover_div">
                 <div className="icons_hover">
-                    <div className="img">
-                        <FiHeart />
+                <div onClick={() => dispatch(toggleHeart(el))} className="img">
+                        {
+                            wishlist?.some(item => item.id === el.id)
+                            ?
+                            <FaHeart />
+                            :
+                            <FiHeart />
+                        }
                     </div>
-                    <div className="img">
+                    <div onClick={() => dispatch(addToCart(el))} className="img">
                         <PiShoppingCartBold />
                     </div>
                 </div>

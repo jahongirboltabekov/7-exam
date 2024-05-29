@@ -14,17 +14,31 @@
 
     ul{
         display: flex;
-        gap: 25px;
+        gap: 50px;
         align-items: center;
 
         li{
             list-style: none;
             
+            
+            a{
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+
+            }
+            span{
+                padding: 5px;
+                border-radius: 50%;
+                background-color: #33A0FF;
+                color: white;
+            }
+            
         }
 
         .icons{
-            width: 24px;
-            height: 24px;
+            width: 30px;
+            height: 30px;
         }
 
         .li1{
@@ -33,6 +47,7 @@
             font-size: 20px;
             line-height: 24.36px;
         }
+
         .li2{
             font-family: 'Prompt';
             font-weight: 400;
