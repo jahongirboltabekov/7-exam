@@ -25,7 +25,7 @@ function Header() {
                 <ul>
                     <li><IoPersonOutline className='icons' /></li>
                     <li><NavLink className={({isActive}) => isActive ? "link-active" : ""} to={'/wishlist'}><CiHeart className='icons' /></NavLink></li>
-                    <li><IoCartOutline className='icons' /></li>
+                    <li><NavLink className={({isActive}) => isActive ? "link-active" : ""} to={'/cart'}><IoCartOutline className='icons' /></NavLink></li>
                     <li className='li1'>Items</li>
                     <li className='li2'>$0.00</li>
                     <li><IoSearchSharp className='icons' /></li>

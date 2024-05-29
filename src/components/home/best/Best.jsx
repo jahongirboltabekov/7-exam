@@ -4,11 +4,12 @@ import './Best.scss'
 import { MdOutlineStar} from "react-icons/md";
 import { FiHeart } from "react-icons/fi";
 import { PiShoppingCartBold } from "react-icons/pi";
+import { FaHeart } from "react-icons/fa";
 import { NavLink } from 'react-router-dom';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import {toggleHeart} from '../../../context/Heart/index'
-import { FaHeart } from "react-icons/fa";
+import { addToCart } from '../../../context/Card';
 
 
 
@@ -51,7 +52,7 @@ function Best({data, loading}) {
                             <FiHeart />
                         }
                     </div>
-                    <div className="img">
+                    <div onClick={() => dispatch(addToCart(el))} className="img">
                         <PiShoppingCartBold />
                     </div>
                 </div>
