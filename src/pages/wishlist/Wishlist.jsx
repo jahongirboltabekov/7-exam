@@ -7,12 +7,12 @@ import { PiShoppingCartBold } from "react-icons/pi";
 import { NavLink } from 'react-router-dom';
 import { toggleHeart } from '../../context/Heart';
 import { RiHeartsFill } from "react-icons/ri";
+import { FaHeart } from "react-icons/fa";
 
 
 function Wishlist() {
     const dispatch = useDispatch()
   let wishlist = useSelector(state => state.heart.value)
-  console.log(wishlist);
 
   let products = wishlist?.map((el) => 
         <div className="best_card" key={el.id}>
@@ -21,7 +21,13 @@ function Wishlist() {
                 <div className="hover_div">
                 <div className="icons_hover">
                     <div onClick={() => dispatch(toggleHeart(el))} className="img">
-                        <FiHeart />
+                    {
+                            wishlist?.some(item => item.id === el.id)
+                            ?
+                            <FaHeart />
+                            :
+                            <FiHeart />
+                        }
                     </div>
                     <div className="img">
                         <PiShoppingCartBold />

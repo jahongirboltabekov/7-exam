@@ -6,15 +6,17 @@ import { FiHeart } from "react-icons/fi";
 import { PiShoppingCartBold } from "react-icons/pi";
 import { NavLink } from 'react-router-dom';
 import axios from 'axios';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import {toggleHeart} from '../../../context/Heart/index'
+import { FaHeart } from "react-icons/fa";
 
 
 
 
 function Best({data, loading}) {
 
-    let dispatch = useDispatch()
+  let wishlist = useSelector(state => state.heart.value)
+  let dispatch = useDispatch()
 
     const [count, setCount] = useState(1)
     const [dataSet,  setData] = useState(data)
@@ -41,7 +43,13 @@ function Best({data, loading}) {
                 <div className="hover_div">
                 <div className="icons_hover">
                     <div onClick={() => dispatch(toggleHeart(el))} className="img">
-                        <FiHeart />
+                        {
+                            wishlist?.some(item => item.id === el.id)
+                            ?
+                            <FaHeart />
+                            :
+                            <FiHeart />
+                        }
                     </div>
                     <div className="img">
                         <PiShoppingCartBold />
