@@ -158,10 +158,8 @@
         margin-bottom: 96px;
 
         input{
-            flex: 1;
             border: 2px solid #bcddfe;
             border-radius: 5px;
-            flex: 1;
             outline: 0;
             padding: 20px;
             color: rgb(38, 38, 38);
@@ -171,7 +169,6 @@
             line-height: -1px;
             letter-spacing: 0%;
             width: 100%;
-            position: relative;
         }
         button{
             padding: 26px 27.5px;
@@ -179,8 +176,6 @@
             background-color: #40bfff;
             border: none;
             border-radius: 0 5px 5px 0;
-            position: absolute;
-            right: 400px;
             border: 1px solid #40bfff;
         }
 

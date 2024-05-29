@@ -1,40 +1,20 @@
-
-import React, { useEffect, useState } from 'react'
-import './Best.scss'
+import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import './Wishlist.scss'
 import { MdOutlineStar} from "react-icons/md";
 import { FiHeart } from "react-icons/fi";
 import { PiShoppingCartBold } from "react-icons/pi";
 import { NavLink } from 'react-router-dom';
-import axios from 'axios';
-import { useDispatch } from 'react-redux';
-import {toggleHeart} from '../../../context/Heart/index'
+import { toggleHeart } from '../../context/Heart';
+import { RiHeartsFill } from "react-icons/ri";
 
 
+function Wishlist() {
+    const dispatch = useDispatch()
+  let wishlist = useSelector(state => state.heart.value)
+  console.log(wishlist);
 
-
-function Best({data, loading}) {
-
-    let dispatch = useDispatch()
-
-    const [count, setCount] = useState(1)
-    const [dataSet,  setData] = useState(data)
-    const [loadingset,setLoading] = useState(loading)
-
-    useEffect(() =>{
-        setLoading(true)
-        axios
-            .get(`https://fakestoreapi.com/products?limit=${count*8}`)
-            .then(res => {
-                setData(res.data);
-                setLoading(false);
-            })
-            .catch(err => {
-                console.error("Error fetching data: ", err);
-                setLoading(false);              
-            })
-        }, [count])
-
-    let products = dataSet?.map((el) => 
+  let products = wishlist?.map((el) => 
         <div className="best_card" key={el.id}>
             <div className="best_img">
                 <img src={el.image} alt="" />
@@ -71,26 +51,42 @@ function Best({data, loading}) {
             
         </div>
     )
+  
+  return (
+    <div>
 
-    return (
-        <div>
-            <div className="container">
-                <div className="best_seller">
-                    <h2>BEST SELLER</h2>
+      <div className="product_text">
+          <div className="container">
+              <h3> <span>Home</span> / Wishlist</h3>
+          </div> 
+      </div>
 
-                    {
-                        loadingset ? <h1>Loading</h1>
-                        :
-                        <></>
-                    }
-                    <div className="best_cards">
-                        {products}
-                    </div>
-                    <button onClick={() => setCount(p => p + 1)}>LOAD MORE</button>
+
+
+      <div className="container">
+        <h3>Wishlist</h3>
+
+            {
+                wishlist.length
+                ?
+                <div className="best_cards">
+                    {products}
                 </div>
-            </div>
-        </div>
-    )
+                :
+                <div className="empty">
+                    <RiHeartsFill className='hearts' />
+                    <h1>Sizga yoqqanini qoʻshing</h1> 
+                    <p>Bosh sahifaga oʻting va mahsulotdagi ♡ belgisini bosing</p>
+                    <NavLink to={'/'}><button>Bosh Sahifaga</button></NavLink>
+                    
+                </div>
+
+            }
+      </div>
+
+
+    </div>
+  )
 }
 
-export default Best
+export default Wishlist

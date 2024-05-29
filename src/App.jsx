@@ -8,6 +8,7 @@ import Contact from './pages/Contact'
 import Home from './pages/Home'
 import SingleRoute from './pages/SingleRoute'
 import Sneakers from './pages/Sneakers'
+import Wishlist from './pages/wishlist/Wishlist'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path='/sneakers' element ={<Sneakers/>} />
         <Route path='/belt' element ={<Belt/>} />
         <Route path='/contact' element ={<Contact/>} />
+        <Route path='/wishlist' element ={<Wishlist/>} />
       </Routes>
       <Footer/>
     </>

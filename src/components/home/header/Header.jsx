@@ -4,6 +4,7 @@ import { IoPersonOutline } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";
 import { IoCartOutline } from "react-icons/io5";
 import { IoSearchSharp } from "react-icons/io5";
+import { NavLink } from 'react-router-dom';
 
 function Header() {
   return (
@@ -23,7 +24,7 @@ function Header() {
                 </div>
                 <ul>
                     <li><IoPersonOutline className='icons' /></li>
-                    <li><CiHeart className='icons' /></li>
+                    <NavLink to={'/wishlist'}> <li><CiHeart className='icons' /></li></NavLink>
                     <li><IoCartOutline className='icons' /></li>
                     <li className='li1'>Items</li>
                     <li className='li2'>$0.00</li>

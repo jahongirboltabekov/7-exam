@@ -1,5 +1,4 @@
-import axios from '../../api'
-import React, { useEffect, useState } from 'react'
+import React, {  useEffect, useState } from 'react'
 import { NavLink, useLocation, useParams } from 'react-router-dom'
 import './Single.scss'
 import { MdOutlineStar} from "react-icons/md";
@@ -13,16 +12,25 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-
+import { useUpdateProductQuery } from '../../context/ProductApi/index';
+import { useGetProductsQuery } from '../../context/ProductApi/index';
 
 
 function Single() {
-
+    const{data:data_swiper} = useGetProductsQuery()
     const {id} = useParams()
+    const {data} = useUpdateProductQuery(id)
+
     const {pathname} = useLocation()
-    const [data, setData] = useState(null)
-    const [data2, setData2] = useState([])
+
     const[count,setcount] = useState(1)
+
+
+    useEffect(() =>{
+        if(pathname.includes){
+            window.scrollTo(0,0)
+        }
+    })
 
     const Plus = () =>{
         return setcount(count+1)
@@ -37,27 +45,9 @@ function Single() {
         }
     }
 
-
-    useEffect(()=>{
-        if(pathname.includes){
-            window.scrollTo(0,0)
-        }
-        axios
-            .get(`/products/${id}`)
-            .then(res => setData(res.data))
-            .catch(err => console.log(err))
-    },[id])
-
-    useEffect(()=>{
-        axios
-          .get(`/products?limit=${4}`)
-          .then(res => setData2(res.data))
-          .catch(res => console.log(res))
-    },[])
-
-    let swiper_products = data2.map((el) => 
-        <SwiperSlide className=''>
-            <div className="swiper_card" key={el.id}>
+    let swiper_products = data_swiper?.map((el) => 
+        <SwiperSlide className='' key={el.id}>
+            <div className="swiper_card" >
                 <NavLink to={`/products/${el.id}`}>
                     <img src={el.image} />
                     <div className="stars">
@@ -78,7 +68,7 @@ function Single() {
 
     )
 
-    let products2 = data2.map((el) =>
+    let products2 = data_swiper?.slice(0,4)?.map((el) =>
         <div className="best_card" key={el.id}>
             <div className="best_img">
                 <img src={el.image} alt="" />
@@ -248,9 +238,9 @@ function Single() {
                     </div>
                     <div className="product_infor">
                         <div className="theme">
-                            <h4>Product Infomation</h4>
-                            <h3>Reviews <span>0</span></h3>
-                            <h3>Another tab</h3>
+                            <h4 className='h4'>Product Infomation</h4>
+                            <h3 className='h3'>Reviews <span>0</span></h3>
+                            <h3 className='h3'>Another tab</h3>
                         </div>
                         <div className="line"></div>
                         <div className="p_div">
