@@ -99,6 +99,7 @@
                 list-style: none;
                 
                 
+                
                 a{
                     text-decoration: none;
                     display: flex;
@@ -114,14 +115,15 @@
                     border-radius: 50%;
                     background-color: #33A0FF;
                     color: white;
+                    position: absolute;
+                }
+                .icons{
+                    width: 30px;
+                    height: 30px;
                 }
                 
             }
     
-            .icons{
-                width: 30px;
-                height: 30px;
-            }
     
             .li1{
                 font-family: 'Prompt';
