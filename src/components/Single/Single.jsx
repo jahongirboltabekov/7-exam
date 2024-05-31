@@ -143,7 +143,7 @@ function Single() {
             <div className="wrapper">
                 <div className="product">
                     <div className="in_product">
-                        <div className="img">
+                        <div className="single_img">
                             <img src={data?.image} alt="" />
                         </div>
                         <div className="about_product">
@@ -249,6 +249,7 @@ function Single() {
 
                         </div>
                     </div>
+
                     <div className="product_infor">
                         <div className="theme">
                             <h4 className='h4'>Product Infomation</h4>
@@ -263,6 +264,7 @@ function Single() {
                         </div>
                     </div>
                 </div>
+
                 <div className="swiper_product">
                     <h4>BEST SELLER</h4>
                     <Swiper

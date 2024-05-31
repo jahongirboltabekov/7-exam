@@ -149,6 +149,8 @@
             border-top: 2px solid #f6f7f8;
             padding-top: 33px;
             display: flex;
+            flex-direction: column;
+            gap: 50px;
             justify-content: space-between;
             align-items: center;
     
