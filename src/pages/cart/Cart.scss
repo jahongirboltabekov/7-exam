@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
 .cartslice{
 
@@ -105,6 +106,226 @@
 
     }
  
+}
+
+.modul{
+    position: absolute;
+    top: 600px;
+    right: 500px;
+    padding: 70px 100px;
+    max-width: 1021px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: .3s ease;
+    z-index: 10;
+    transform-origin: top;
+    transform: scaleY(0);
+    background-color: white;
+    box-shadow: 10px 10px 100px 100px grey;
+
+    .modul_btn{
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        margin: 0 auto;
+        padding: 20px;
+        .x_btn{
+            width: 30px;
+            height: 30px;
+            color: #33a0ff;
+        }
+
+        button{
+            background-color: white;
+            border: none;
+        }
+        
+
+    }
+
+    h5{
+        text-align: center;
+        font-family: 'Raleway';
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 37.5px;
+        color: #33a0ff;
+        margin-bottom: 120px;
+
+    }
+    
+    .modul_input{
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        
+        .modul_inputs{
+            display: flex;
+            flex-direction: column;
+            gap: 33px;
+            
+            
+            
+            input{
+                width: 100%;
+                padding: 15px 16px;
+                border: none;
+                border-radius: 10px;
+                background-color: #f6f6f6;
+                width: 380px;
+                font-family: 'Nunito sans';
+                font-size: 16px;
+                line-height: 21px;
+                letter-spacing: -2%;
+            }
+            textarea{
+                width: 100%;
+                padding: 15px 16px;
+                border: none;
+                border-radius: 10px;
+                background-color: #f6f6f6;
+                max-width: 380px;
+                font-family: 'Nunito sans';
+                font-size: 16px;
+                line-height: 21px;
+                letter-spacing: -2%;
+                resize: none;
+
+                
+            }
+
+        }
+
+        .modul_input1{
+            .choosePaycard{
+                margin-top: 25px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                
+                p{
+                    font-family: 'Raleway';
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 23px;
+                    color: #33a0ff;
+                }
+                
+                .modul_img_icon{
+                    padding: 16px;
+                    display: flex;
+                    align-items: center;
+
+                    .radio{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                    }
+                    
+                }
+
+            }
+        }
+    }
+
+    .btn_modul{
+
+        
+        padding: 16.5px 10px;
+        background-color: #33a0ff;
+        border: 1px solid #33a0ff;
+        color: white;
+        font-family: 'Poppins';
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 27px;
+        border-radius: 5px;
+        margin: 0 auto;
+
+    }
+    
+    .btn_modul:hover{
+        background-color: white;
+        border: 1px solid #33a0ff;
+        color: #33a0ff;
+        transition: 0.2px;
+    }
+    
+
+
+}
+
+.modul.show{
+    transform: scaleY(1);
+}
+
+
+.all_sum{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 375px;
+    margin: 0 auto;
+    gap: 23px;
+    margin-bottom: 156px;
+
+    .p_sum{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        p{
+            font-family: 'Poppins';
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 27px;
+        }
+
+    }
+
+    .h_sum{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        h6{
+            font-family: 'Poppins';
+            font-size: 30px;
+            font-weight: 500;
+            line-height: 45px;
+        }
+
+    }
+
+    .line{
+        width: 100%;
+        border: 1px solid #f6f7f8;
+    }
+
+    button{
+        width: 100%;
+        padding: 16.5px 0;
+        background-color: #33a0ff;
+        border: 1px solid #33a0ff;
+        color: white;
+        font-family: 'Poppins';
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 27px;
+        border-radius: 5px;
+
+    }
+
+    button:hover{
+        background-color: white;
+        border: 1px solid #33a0ff;
+        color: #33a0ff;
+        transition: 0.2px;
+    }
 }
 
 @media (max-width: 700px){
@@ -230,6 +451,113 @@
     
         }
      
+    }
+    .modul{
+        padding: 70px 100px;
+        max-width: 1021px;
+        margin: 0 auto;
+        .modul_btn{
+            width: 100%;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            margin: 0 auto;
+            padding: 20px;
+            .x_btn{
+                width: 30px;
+                height: 30px;
+                color: #33a0ff;
+            }
+    
+            button{
+                background-color: white;
+                border: none;
+            }
+            
+    
+        }
+        h5{
+            text-align: center;
+            font-family: 'Raleway';
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 37.5px;
+            color: #33a0ff;
+            margin-bottom: 120px;
+    
+        }
+        .modul_input{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .modul_inputs{
+                display: flex;
+                flex-direction: column;
+                gap: 33px;
+                
+                
+                
+                input{
+                    width: 100%;
+                    padding: 15px 16px;
+                    border: none;
+                    border-radius: 10px;
+                    background-color: #f6f6f6;
+                    width: 380px;
+                    font-family: 'Nunito sans';
+                    font-size: 16px;
+                    line-height: 21px;
+                    letter-spacing: -2%;
+                }
+                textarea{
+                    width: 100%;
+                    padding: 15px 16px;
+                    border: none;
+                    border-radius: 10px;
+                    background-color: #f6f6f6;
+                    max-width: 380px;
+                    font-family: 'Nunito sans';
+                    font-size: 16px;
+                    line-height: 21px;
+                    letter-spacing: -2%;
+                    resize: none;
+    
+                    
+                }
+    
+            }
+    
+            .modul_input1{
+                .choosePaycard{
+                    margin-top: 25px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    
+                    p{
+                        font-family: 'Raleway';
+                        font-weight: 600;
+                        font-size: 20px;
+                        line-height: 23px;
+                        color: #33a0ff;
+                    }
+                    
+                    .modul_img_icon{
+                        padding: 16px;
+                        display: flex;
+                        align-items: center;
+    
+                        .radio{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                        }
+                        
+                    }
+    
+                }
+            }
+        }
     }
 }
 @media (max-width: 500px){
@@ -357,5 +685,115 @@
     
         }
      
+    }
+}
+
+@media (max-width: 1000px){
+    .modul{
+        padding: 70px 100px;
+        max-width: 1021px;
+        margin: 0 auto;
+        .modul_btn{
+            width: 100%;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            margin: 0 auto;
+            padding: 20px;
+            .x_btn{
+                width: 30px;
+                height: 30px;
+                color: #33a0ff;
+            }
+    
+            button{
+                background-color: white;
+                border: none;
+            }
+            
+    
+        }
+        h5{
+            text-align: center;
+            font-family: 'Raleway';
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 37.5px;
+            color: #33a0ff;
+            margin-bottom: 120px;
+    
+        }
+        .modul_input{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .modul_inputs{
+                display: flex;
+                flex-direction: column;
+                gap: 33px;
+                
+                
+                
+                input{
+                    width: 100%;
+                    padding: 15px 16px;
+                    border: none;
+                    border-radius: 10px;
+                    background-color: #f6f6f6;
+                    width: 280px;
+                    font-family: 'Nunito sans';
+                    font-size: 16px;
+                    line-height: 21px;
+                    letter-spacing: -2%;
+                }
+                textarea{
+                    width: 100%;
+                    padding: 15px 16px;
+                    border: none;
+                    border-radius: 10px;
+                    background-color: #f6f6f6;
+                    max-width: 280px;
+                    font-family: 'Nunito sans';
+                    font-size: 16px;
+                    line-height: 21px;
+                    letter-spacing: -2%;
+                    resize: none;
+    
+                    
+                }
+    
+            }
+    
+            .modul_input1{
+                .choosePaycard{
+                    margin-top: 25px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    
+                    p{
+                        font-family: 'Raleway';
+                        font-weight: 600;
+                        font-size: 20px;
+                        line-height: 23px;
+                        color: #33a0ff;
+                    }
+                    
+                    .modul_img_icon{
+                        padding: 16px;
+                        display: flex;
+                        align-items: center;
+    
+                        .radio{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                        }
+                        
+                    }
+    
+                }
+            }
+        }
     }
 }
