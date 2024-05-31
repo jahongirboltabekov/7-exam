@@ -1,45 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-.login{
-    margin: 0 auto;
-    padding: 117px 0px 230px 0px;
-    display: flex;
-    gap: 30px;
+
+.admin_text{
+    display:flex;
     flex-direction: column;
-    align-items: center;
+    gap: 44px;
+    margin-bottom: 500px;
 
-    .input{
+    h1{
+        font-family: 'Poppins';
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 60px;
+        line-height: -2%;
+    }
+
+    .admin_p{
         display: flex;
         flex-direction: column;
-        gap: 8px;
-        width: 100%;
-        max-width: 510px;
+        gap: 26px;
 
         p{
-            font-family: "Raleway";
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 16.44px;
-        }
-
-        input{
-            padding: 25px 20px;
-            border: none;
-            outline: none;
-            border: 1px solid #969393;
-            border-radius: 5px;
-        }
-        input:focus{
-            border: 1px solid #33a0ff;
-
+            font-family: 'Poppins';
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 28.8px;
+            letter-spacing: 0.5px;
         }
     }
 
     button{
         padding: 15px;
         width: 100%;
-        max-width: 510px;
+        max-width: 338px;
         border: 1px solid #33a0ff;
         background-color: #33a0ff;
         border-radius: 10px;

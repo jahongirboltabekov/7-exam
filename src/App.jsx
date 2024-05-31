@@ -11,6 +11,7 @@ import Wishlist from './pages/wishlist/Wishlist'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Login from './pages/login/Login'
+import Admin from './pages/admin/Admin'
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path='/wishlist' element ={<Wishlist/>} />
         <Route path='/cart' element ={<Cart/>} />
         <Route path='/login' element ={<Login/>} />
+        <Route path='/admin' element ={<Admin/>} />
       </Routes>
       <Footer/>
     </>

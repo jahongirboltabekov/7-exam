@@ -14,8 +14,10 @@
 
     ul{
         display: flex;
-        gap: 50px;
         align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 500px;
 
         li{
             list-style: none;
@@ -28,7 +30,11 @@
 
             }
             span{
-                padding: 5px;
+                width: 25px;
+                height: 25px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 border-radius: 50%;
                 background-color: #33A0FF;
                 color: white;
@@ -67,3 +73,4 @@
 .link-active{
     color: #33A0FF;
 }
+

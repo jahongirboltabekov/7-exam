@@ -1,6 +1,5 @@
 import React from 'react'
 import { BsFillCartXFill } from "react-icons/bs";
-<BsFillCartXFill />
 import { useDispatch, useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom';
 import { IoClose } from "react-icons/io5";

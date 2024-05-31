@@ -2,13 +2,16 @@
 nav{
     display: flex;
     justify-content: space-between;
+    gap: 30px;
     align-items: center;
     padding: 26.26px 0 26.26px 0;
 
-    ul{
+    .ul_link{
         display: flex;
-        gap: 97.87px;
+        justify-content: space-between;
         list-style: none;
+        width: 100%;
+        max-width: 815px;
         
         a{
             text-decoration: none;
@@ -25,8 +28,46 @@ nav{
 
 
     }
+
+    .menu{
+        display: none;
+    }
 }
 
 .link-active{
     color: #33A0FF;
+}
+
+
+
+@media (max-width: 700px){
+
+ nav{
+    .ul_link{
+        position: absolute;
+        top: 175px;
+        left: 0;    
+        width: 100%;
+        padding: 20px 0;
+        background: white;
+        box-shadow: 0 3px 5px #0002;
+        flex-direction: column;
+        gap: 12px;
+        justify-content: center;
+        align-items: center;
+        transition: .3s ease;
+        z-index: 10;
+        transform-origin: top;
+        transform: scaleY(0);
+    }
+    .ul_link.show{
+        transform: scaleY(1);
+    } 
+    .menu{
+        width: 30px;
+        height: 30px;
+        display: block;
+    }
+ }
+
 }

@@ -23,6 +23,7 @@ function Banner() {
                   </div>
 
                 </div>
+
                 <div className="banner_card">
                   <p className='about'>FS - Nike Air Max 270 React...</p>
                   <div className="div_img">
@@ -34,6 +35,7 @@ function Banner() {
                   </div>
 
                 </div>
+                
                 <div className="banner_card">
                   <p className='about'>FS - Nike Air Max 270 React...</p>
                   <div className="div_img">

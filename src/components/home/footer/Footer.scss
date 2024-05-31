@@ -9,15 +9,16 @@
 
     .footerCard_1{
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        gap: 305px;
         margin-bottom: 81px;
+        width: 100%;
 
         .card{
             display: flex;
             flex-direction: column;
             gap: 23px;
+            max-width: 230px;
 
             h5{
                 font-family: 'Poppins';
@@ -73,6 +74,91 @@
             font-size: 14px;
             line-height: 17.05px;
             color: #c1c8ce;
+        }
+    }
+}
+
+@media (max-width: 700px){
+    .footer{
+        background-color: #bcddfe;
+        padding: 155px 0 64px 0;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap !important;
+    
+        .footerCard_1{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 81px;
+            gap: 40px;
+            width: 100%;
+    
+            .card{
+                display: flex;
+                flex-direction: column;
+                gap: 23px;
+                max-width: 230px;
+    
+                h5{
+                    font-family: 'Poppins';
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 27px;
+                }
+    
+                p{
+                    font-family: 'Poppins';
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 14.62px;
+                }
+            }
+        }
+     
+        .footerCard_2{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 63px;
+            gap: 40px;
+    
+            .card2{
+    
+                h5{
+                    font-family: 'Poppins';
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 27px;
+                    margin-bottom: 30px;
+                }
+                p{
+                    font-family: 'Poppins';
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 21px;
+                    color: #262626;
+                }
+            }
+        }
+    
+        .line{
+            border: none;
+            border-top: 2px solid #f6f7f8;
+            padding-top: 33px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+    
+            p{
+                font-family: 'Poppins';
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 17.05px;
+                color: #c1c8ce;
+            }
         }
     }
 }

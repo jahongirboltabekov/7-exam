@@ -40,23 +40,23 @@ function Best({data, loading}) {
     let products = dataSet?.map((el) => 
         <div className="best_card" key={el.id}>
             <div className="best_img">
-                <img src={el.image} alt="" />
+                <img  src={el.image} alt="" />
                 <div className="hover_div">
-                <div className="icons_hover">
-                    <div onClick={() => dispatch(toggleHeart(el))} className="img">
-                        {
-                            wishlist?.some(item => item.id === el.id)
-                            ?
-                            <FaHeart />
-                            :
-                            <FiHeart />
-                        }
-                    </div>
-                    <div onClick={() => dispatch(addToCart(el))} className="img">
-                        <PiShoppingCartBold />
+                    <div className="icons_hover">
+                        <div onClick={() => dispatch(toggleHeart(el))} className="img_">
+                            {
+                                wishlist?.some(item => item.id === el.id)
+                                ?
+                                <FaHeart />
+                                :
+                                <FiHeart />
+                            }
+                        </div>
+                        <div onClick={() => dispatch(addToCart(el))} className="img_">
+                            <PiShoppingCartBold />
+                        </div>
                     </div>
                 </div>
-            </div>
             </div>
 
             <NavLink to={`/products/${el.id}`}>

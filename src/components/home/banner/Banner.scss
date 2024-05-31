@@ -3,13 +3,14 @@
 
 .img{
     width: 100%;
-    position: relative;
+    position: absolute;
+    height: 653px;
 }
 
 .banner_position{
 
-    position: absolute;
-    top: 424px;
+    position: relative;
+    top: 250px;
 
     h2{
         font-family: 'Poppins';
@@ -36,6 +37,11 @@
                 display: flex;
                 justify-content: center;
                 overflow: hidden;
+
+                img{
+                    width: 100%;
+                    max-width: 360px;
+                }
 
                 img:hover{
                     transform: scale(1.2);
@@ -95,4 +101,16 @@
             transition: 0.5s;
         }
     }
+}
+
+@media only screen and (max-width: 800px){
+    .banner_cards{
+    
+        margin-bottom: 63.51px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5px;
+        padding: 0 50px;
+    }
+    
 }
