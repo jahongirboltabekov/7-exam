@@ -152,7 +152,7 @@ h3{
                 display: flex;
                 gap: 10px;
 
-                .img{
+                .img_{
                     padding: 17px;
                     border: 3px solid #f1f8fe;
                     color: #40bfff;
@@ -162,7 +162,7 @@ h3{
                     align-items: center;
                 }
 
-                .img:hover{
+                .img_:hover{
                     border: 3px solid #40bfff;
                 }
             }
@@ -193,6 +193,7 @@ h3{
         font-weight: 700;
         line-height: 52px;
         color: #33a0ff;
+        text-align: center;
     }
 
     p{
@@ -201,6 +202,7 @@ h3{
         font-weight: 400;
         line-height: 20px;
         color: #33a0ff;
+        text-align: center;
     }
 
     button{

@@ -17,7 +17,7 @@ const cartSlice = createSlice({
 					inx === index ? { ...item, quantity: item.quantity + 1 } : item
 				);
 			}
-			toast.success("Ma'lumot yaratildi")
+			toast.success("Maxsulot savadga saqlandi")
 			localStorage.setItem("cart", JSON.stringify(state.value));
 		},
 		removeFromCart: (state, action) => {

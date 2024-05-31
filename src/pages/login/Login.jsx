@@ -32,14 +32,14 @@ function Login() {
           })
   }
 
-  useEffect(() => {
-    const token = localStorage.getItem("x-auth-token")
-    if (token) {
-      navigate('/admin')
-    } else{
-      navigate('/login')
-    }
-  }, [navigate])
+  // useEffect(() => {
+  //   const token = localStorage.getItem("x-auth-token")
+  //   if (token) {
+  //     navigate('/admin')
+  //   } else{
+  //     navigate('/login')
+  //   }
+  // }, [navigate])
 
   return (
     <div>

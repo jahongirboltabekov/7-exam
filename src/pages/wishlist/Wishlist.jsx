@@ -20,7 +20,7 @@ function Wishlist() {
                 <img src={el.image} alt="" />
                 <div className="hover_div">
                 <div className="icons_hover">
-                    <div onClick={() => dispatch(toggleHeart(el))} className="img">
+                    <div onClick={() => dispatch(toggleHeart(el))} className="img_">
                     {
                             wishlist?.some(item => item.id === el.id)
                             ?
@@ -29,7 +29,7 @@ function Wishlist() {
                             <FiHeart />
                         }
                     </div>
-                    <div className="img">
+                    <div className="img_">
                         <PiShoppingCartBold />
                     </div>
                 </div>

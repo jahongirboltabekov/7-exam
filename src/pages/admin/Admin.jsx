@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import './Admin.scss'
 
 function Admin() {
@@ -8,9 +8,7 @@ function Admin() {
     const token = localStorage.getItem("x-auth-token")
     if (token) {
       navigate('/admin')
-    } else{
-      navigate("/login")
-    }
+    } 
   }, [navigate])
   return (
     <div>
@@ -27,7 +25,7 @@ function Admin() {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur cupiditate inventore, deserunt magnam provident dolores blanditiis ullam iusto! Assumenda dolor quis itaque commodi tempore laudantium quam deleniti id consequatur. Minus delectus officia unde quam nulla ut. Odit quibusdam quis aut enim delectus blanditiis, quisquam quidem maiores suscipit. Dignissimos, ut repudiandae!</p>     
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur cupiditate inventore, deserunt magnam provident dolores blanditiis ullam iusto! Assumenda dolor quis itaque commodi tempore laudantium quam deleniti id consequatur. Minus delectus officia unde quam nulla ut. Odit quibusdam quis aut enim delectus blanditiis, quisquam quidem maiores suscipit. Dignissimos, ut repudiandae!</p>
                 </div>
-                <button>Log out</button>
+                <NavLink to={'/login'}><button>Log out</button></NavLink>
             </div>
         </div> 
     </div>

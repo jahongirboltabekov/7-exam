@@ -15,7 +15,7 @@ function Cart() {
         <div className="" key={el.id}>
             <div  className="cart_item" >
                 <div className="cart_div1">
-                    <button onClick={() => dispatch(removeFromCart(el))}><IoClose /></button>
+                    <button onClick={() => dispatch(removeFromCart(el))}><IoClose className='X_btn' /></button>
                     <img src={el.image} alt="" />
                     <p>{el.title.slice(0, 25)}</p>
                 </div>
